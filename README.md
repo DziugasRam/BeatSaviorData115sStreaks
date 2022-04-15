@@ -4,6 +4,8 @@ Usage:
 
 install node js from https://nodejs.org/en/download/
 
+download main.js file https://github.com/DziugasRam/BeatSaviorData115sStreaks/blob/main/main.js
+
 open 'Command Prompt' and locate the directory of 'main.js' file
 
 run:
