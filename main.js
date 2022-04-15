@@ -23,6 +23,5 @@ fs.readdirSync(dir).forEach((fileName) => {
 });
 
 result.sort((a, b) => a[1] - b[1]);
-for (var res of result) {
-    if (res[1] > 10) console.log(res[0], res[1]);
-}
+var filteredResult = result.filter((a) => a[1] > 10);
+console.table(filteredResult);
