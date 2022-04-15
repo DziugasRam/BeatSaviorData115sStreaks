@@ -17,7 +17,7 @@ fs.readdirSync(dir).forEach((fileName) => {
                 else count = 0;
                 maxCount = maxCount < count ? count : maxCount;
             }
-            result.push([obj.songName, maxCount]);
+            result.push([`${obj.songName} : ${obj.songDifficulty}`, maxCount]);
         } catch {}
     });
 });
