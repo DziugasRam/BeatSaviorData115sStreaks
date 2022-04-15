@@ -1,6 +1,12 @@
 # BeatSaviorData115sStreaks
 
 Usage:
+
+install node js from https://nodejs.org/en/download/
+
+open 'Command Prompt' and locate the directory of 'main.js' file
+
+run:
 ```
 node main.js
 ```
