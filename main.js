@@ -22,6 +22,5 @@ fs.readdirSync(dir).forEach((fileName) => {
     });
 });
 
-result.sort((a, b) => a[1] - b[1]);
-var filteredResult = result.filter((a) => a[1] > 10);
-console.table(filteredResult);
+result.sort((a, b) => b[1] - a[1]);
+console.table(result.slice(0, 15));
