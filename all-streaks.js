@@ -9,8 +9,7 @@ fs.readdirSync(dir).forEach((fileName) => {
         try {
             var obj = JSON.parse(line);
             var noteAccs = obj.deepTrackers?.noteTracker?.notes
-                ?.map((t) => (t.score[0] + t.score[1] + t.score[2] > 0 ? t.score[1] : undefined))
-                .filter((acc) => acc !== undefined);
+                ?.map((t) => (t.score[0] + t.score[1] + t.score[2] > 0 ? t.score[1] : undefined));
             if (!noteAccs) return;
 
             var count = [];
@@ -25,7 +24,7 @@ fs.readdirSync(dir).forEach((fileName) => {
                     count = count.map((c) => 0); // lohl
                 }
                 prevAcc = acc;
-
+                if(acc === undefined) continue;
                 count[acc]++;
                 maxCount[acc] = maxCount[acc] < count[acc] ? count[acc] : maxCount[acc];
             }
