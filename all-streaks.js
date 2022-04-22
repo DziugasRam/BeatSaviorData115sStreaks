@@ -38,7 +38,7 @@ for (var acc = 0; acc <= 15; ++acc) {
     console.log();
     console.log(acc);
     var printableResult = result
-        .slice(0, 3)
-        .reduce((obj, [songName, maxCount]) => ({ ...obj, [songName]: maxCount[acc] }), {});
+        .slice(0, 10)
+        .reduce((obj, [songName, maxCount]) => ([...obj, [songName, maxCount[acc]]]), []);
     console.table(printableResult);
 }
